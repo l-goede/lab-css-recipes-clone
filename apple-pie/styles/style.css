@@ -30,12 +30,6 @@ body {
   margin: 0 6em;
 }
 
-.imgRecipe {
-  height: auto;
-  width: 10em;
-  padding: 2.5em 0 2em;
-}
-
 p {
   text-align: center;
   margin-top: 3em;
@@ -44,21 +38,52 @@ p {
 .ingredients {
   margin-left: 6em;
   margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgRecipe {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 1.5em;
 }
 
 h3 {
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 ul {
   list-style-type: "- ";
+
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+
+.imgCooking {
+  width: 250px;
+  height: 70px;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-self: center;
+  margin-bottom: 0;
 }
 
 .directions {
-  margin-left: 6em;
+  margin: 2em 6em 0;
+  border-top: solid 2px rgb(160, 159, 159);
 }
 
 ol {
+  font-size: 0.8em;
   margin-bottom: 6em;
-  counter-reset: none;
+  padding-top: 1em;
+  line-height: 1.5em;
+  counter-reset: list;
+}
+ol > li {
+  list-style: none;
+}
+ol > li:before {
+  content: counter(list, number) ") ";
+  counter-increment: list;
 }
